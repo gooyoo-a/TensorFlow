@@ -135,7 +135,3 @@ print(x);
 x = tf.transpose(x, perm = [1, 0]);
 print(x);
 
-
-
-
-
