@@ -26,11 +26,15 @@ x_test = x_test.astype("float32") / 255.0;
 model = keras.Sequential(
     [
         keras.Input(shape=(32, 32, 3)),
+        
         layers.Conv2D(32, 3, padding = "valid", activation = "relu"),
         layers.MaxPooling2D(),
+        
         layers.Conv2D(64, 3, activation = "relu"),
         layers.MaxPooling2D(),
-        layers.Conv2D(128, 3, activation = "relu"),
+        
+        layers.Conv2D(128, 3, activation = "relu"),    
+        
         layers.Flatten(),
         layers.Dense(64, activation = "relu"),
         layers.Dense(10),
@@ -40,17 +44,21 @@ model = keras.Sequential(
 
 def my_model():
     inputs = keras.Input(shape = (32, 32, 3));
+    
     x = layers.Conv2D(32, 3)(inputs);
     x = layers.BatchNormalization()(x);
     x = keras.activations.relu(x);
     x = layers.MaxPooling2D()(x);
+    
     x = layers.Conv2D(64, 3)(x);
     x = layers.BatchNormalization()(x);
     x = keras.activations.relu(x);
     x = layers.MaxPooling2D()(x);
+    
     x = layers.Conv2D(128, 3)(x);
     x = layers.BatchNormalization()(x);
     x = keras.activations.relu(x);
+    
     x = layers.Flatten()(x);
     x = layers.Dense(64, activation = "relu")(x);
     outputs = layers.Dense(10)(x);
