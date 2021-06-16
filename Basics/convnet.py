@@ -79,3 +79,4 @@ model.compile(
 model.fit(x_train, y_train, batch_size = 64, epochs = 10, verbose = 1);
 
 print(model.evaluate(x_test, y_test, batch_size = 64, verbose = 1));
+
