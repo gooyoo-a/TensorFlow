@@ -89,3 +89,6 @@ training.compile(
 
 training.fit(x_train, y_train, batch_size = 64, epochs = 2);
 training.evaluate(x_test, y_test, batch_size = 64);
+
+
+
