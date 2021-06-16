@@ -51,4 +51,7 @@ model.compile(
 model.fit(x_train, y_train, batch_size = 32, epochs = 2, verbose = 1);
 model.evaluate(x_test, y_test, batch_size = 32, verbose = 2);
 # model.save_weights('checkpoint_folder/')
-#model.save("saved_model/");
+model.save("saved_model/");
+
+
+
